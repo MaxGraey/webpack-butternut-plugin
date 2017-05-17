@@ -1,6 +1,6 @@
 # webpack-butternut-plugin
 
-#### Webpack plugin for fast, future-friendly minifier with supporting supports ES2015+.
+#### Webpack plugin for fast, future-friendly minifier with supporting ES2015+.
 
 #### Install
 
