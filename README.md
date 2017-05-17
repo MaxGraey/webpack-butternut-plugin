@@ -1,14 +1,21 @@
+<p align="center">
+    <a href="https://www.npmjs.com/package/webpack-butternut-plugin">
+        <img src="https://img.shields.io/npm/v/webpack-butternut-plugin.svg?style=flat-square">
+    </a>
+</p>
+
 # webpack-butternut-plugin
 
-#### Webpack plugin for fast, future-friendly minifier with supporting ES2015+.
+** Webpack plugin for fast, future-friendly minifier with supporting ES2015+.**
+
 
 #### Install
 
-via ***yarn***:
+via **yarn**:
 
     yarn add --dev webpack-butternut-plugin
 
-or via ***npm***:
+or via **npm**:
 
     npm i --save-dev webpack-butternut-plugin
 
@@ -20,7 +27,9 @@ const ButternutPlugin = require('webpack-butternut-plugin');
 
 module.exports = {
   plugins: [
-      new ButternutPlugin()
+      new ButternutPlugin({
+          check: true
+      })
   ]
 }
 ```

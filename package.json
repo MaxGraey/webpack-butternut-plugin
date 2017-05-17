@@ -1,6 +1,6 @@
 {
   "name":        "webpack-butternut-plugin",
-  "version":     "0.1.0",
+  "version":     "0.2.0",
   "description": "Butternut minimize plugin for Webpack",
   "author":      "Max Shaydo (aka MaxGraey)",
   "license":     "MIT",
@@ -31,13 +31,14 @@
 
   "keywords": [
     "webpack",
+    "butternut",
+    "plugin",
     "es6",
     "compiler",
     "build",
     "optimize",
     "minimize",
     "dead",
-    "code",
-    "plugin"
+    "code"
   ]
 }
