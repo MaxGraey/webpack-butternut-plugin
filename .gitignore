@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+dist
+research
+sandbox
+.reify-cache
+.nyc_output
+coverage.lcov
+*.log

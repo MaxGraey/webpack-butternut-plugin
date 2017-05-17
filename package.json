@@ -1,0 +1,43 @@
+{
+  "name":        "webpack-butternut-plugin",
+  "version":     "0.1.0",
+  "description": "Butternut minimize plugin for Webpack",
+  "author":      "Max Shaydo (aka MaxGraey)",
+  "license":     "MIT",
+
+  "main": "index.js",
+
+  "scripts": {
+    "test": "webpack --config test/webpack.config.js"
+  },
+
+  "dependencies": {
+    "butternut":       "^0.4.5",
+    "async":           "^2.4.0",
+    "temp":            "^0.8.3",
+    "webpack":         "^2.5.1",
+    "webpack-sources": "^0.2.3"
+  },
+
+  "devDependencies": {
+    "node-libs-browser": "^2.0.0",
+    "ramda":             "^0.23.0"
+  },
+
+  "repository": {
+    "type": "git",
+    "url":  "git+https://github.com/MaxGraey/webpack-butternut-plugin.git"
+  },
+
+  "keywords": [
+    "webpack",
+    "es6",
+    "compiler",
+    "build",
+    "optimize",
+    "minimize",
+    "dead",
+    "code",
+    "plugin"
+  ]
+}
