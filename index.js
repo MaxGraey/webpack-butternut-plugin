@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const path = require('path');
 const fs   = require('fs');
@@ -7,7 +7,7 @@ const webpack = require('webpack');
 const sources = require('webpack-sources');
 const squash  = require('butternut').squash;
 const async   = require('async');
-const temp    = require('temp').track();
+//const temp    = require('temp').track();
 
 const ModuleFilenameHelpers = require('webpack/lib/ModuleFilenameHelpers');
 
@@ -26,8 +26,7 @@ class ButternutPlugin {
         if (typeof options.sourceMap === 'undefined') {
             options.sourceMap = false;
         }
-        if (options.sourceMap &&
-            typeof options.includeContent === 'undefined') {
+        if (typeof options.includeContent === 'undefined') {
             options.includeContent = false;
         }
         if (typeof options.check === 'undefined') {
@@ -39,9 +38,7 @@ class ButternutPlugin {
     }
 
     apply(compiler) {
-        let code, map;
-		let options = this.options;
-
+        let code, map, options = this.options;
         let tester = options.test = options.test || /\.js($|\?)/i;
 
         let queue = async.queue((task, callback) => {
@@ -85,7 +82,7 @@ class ButternutPlugin {
                             pending++;
 
                             queue.push({
-                                file:  file,
+                                file,
                                 asset: compilation.assets[file],
                                 callback: asset => {
                                     compilation.assets[file] = asset;
