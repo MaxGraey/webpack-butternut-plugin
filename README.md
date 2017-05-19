@@ -3,7 +3,8 @@
         <img src="https://img.shields.io/npm/v/webpack-butternut-plugin.svg?style=flat-square">
     </a>
 </p>
-## Webpack Butternut Plugin
+
+# Webpack Butternut Plugin
 
 **Webpack plugin for fast, future-friendly minifier with supporting ES2015+.**
 
