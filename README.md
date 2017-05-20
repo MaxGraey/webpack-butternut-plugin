@@ -13,11 +13,11 @@
 
 > via **yarn**:
 >
->     yarn add --dev --prod webpack-butternut-plugin
+>     yarn add --dev webpack-butternut-plugin
 >
 > or via **npm**:
 >
->     npm i --save-dev --production webpack-butternut-plugin
+>     npm i --save-dev webpack-butternut-plugin
 
 #### Usage
 
