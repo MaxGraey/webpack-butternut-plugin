@@ -6,7 +6,7 @@ const fs   = require('fs');
 const webpack = require('webpack');
 const sources = require('webpack-sources');
 const squash  = require('butternut').squash;
-const async   = require('async');
+const async   = require("neo-async");
 //const temp    = require('temp').track();
 
 const ModuleFilenameHelpers = require('webpack/lib/ModuleFilenameHelpers');

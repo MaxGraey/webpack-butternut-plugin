@@ -4,9 +4,9 @@ const path    = require('path');
 const webpack = require('webpack');
 const ButternutPlugin = require('../index');
 
-const entry   = 'jquery.uncompress.js';
-const output  = 'jquery.min.js';
 const rootDir = __dirname;
+const entry   = path.join('..', 'samples', 'jquery.uncompress.js');
+const output  = 'jquery.min.js';
 
 const config = {
     entry: path.join(rootDir, entry),

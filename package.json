@@ -1,23 +1,26 @@
 {
   "name": "webpack-butternut-plugin",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Butternut webpack plugin for fast, future-friendly minifier with supporting ES2015+",
   "author": "Max Shaydo (aka MaxGraey)",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --config test/webpack.config.js"
+    "test": "webpack --colors --config test/webpack.config.js",
+    "bench": "node ./benchmark/run.js"
   },
   "dependencies": {
-    "async": "^2.4.0",
+    "neo-async": "^2.1.0",
     "butternut": "^0.4.6",
     "temp": "^0.8.3",
     "webpack": "^2.5.1",
     "webpack-sources": "^0.2.3"
   },
   "devDependencies": {
+    "webpack-closure-compiler": "^2.1.4",
     "node-libs-browser": "^2.0.0",
-    "ramda": "^0.23.0"
+    "ramda": "^0.23.0",
+    "performance-now": "latest"
   },
   "repository": {
     "type": "git",
