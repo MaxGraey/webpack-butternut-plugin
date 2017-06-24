@@ -1,0 +1,16 @@
+LICENSE
+
+# misc
+test
+benchmark
+samples
+
+#build tools
+.travis.yml
+.jenkins.yml
+.codeclimate.yml
+
+#linters
+.jscsrc
+.jshintrc
+.eslintrc*
