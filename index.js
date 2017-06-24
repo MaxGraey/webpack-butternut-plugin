@@ -3,17 +3,18 @@
 const path = require('path');
 const fs   = require('fs');
 
-const sources = require('webpack-sources');
+const {
+    RawSource,
+    ConcatSource,
+    SourceMapConsumer,
+    SourceMapSource
+} = require('webpack-sources');
+
 const squash  = require('butternut').squash;
 const async   = require("neo-async");
 const temp    = require('temp').track();
 
 const ModuleFilenameHelpers = require('webpack/lib/ModuleFilenameHelpers');
-
-const RawSource         = sources.RawSource;
-const ConcatSource      = sources.ConcatSource;
-const SourceMapConsumer = sources.SourceMapConsumer;
-const SourceMapSource   = sources.SourceMapSource;
 
 class ButternutPlugin {
     constructor(options) {
