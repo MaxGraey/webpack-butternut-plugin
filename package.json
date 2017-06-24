@@ -10,17 +10,17 @@
     "bench": "node ./benchmark/run.js"
   },
   "dependencies": {
-    "neo-async": "^2.1.0",
     "butternut": "^0.4.6",
+    "neo-async": "^2.2.2",
     "temp": "^0.8.3",
-    "webpack": "^2.5.1",
-    "webpack-sources": "^0.2.3"
+    "webpack-sources": "^1.0.1"
   },
   "devDependencies": {
-    "webpack-closure-compiler": "^2.1.4",
     "node-libs-browser": "^2.0.0",
-    "ramda": "^0.23.0",
-    "performance-now": "latest"
+    "performance-now": "latest",
+    "ramda": "^0.24.1",
+    "webpack": "^3.0.0",
+    "webpack-closure-compiler": "^2.1.4"
   },
   "repository": {
     "type": "git",

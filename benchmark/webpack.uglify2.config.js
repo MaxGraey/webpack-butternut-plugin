@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 const rootDir = __dirname;
 const entry   = path.join('..', 'samples', 'jquery.uncompress.js');
-const output  = 'jquery.uglify.min.js';
+const output  = 'jquery.uglify2.min.js';
 
 module.exports = function () {
     return {

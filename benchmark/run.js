@@ -5,7 +5,7 @@ const async   = require("neo-async");
 const now     = require("performance-now");
 
 const butternutConfig = require('./webpack.butternut.config');
-const uglifyConfig    = require('./webpack.uglify.config');
+const uglifyConfig    = require('./webpack.uglify2.config');
 const closureConfig   = require('./webpack.closure.config');
 
 
@@ -30,7 +30,7 @@ function run(name, compiler, done) {
         var assets = info.assets;
 
         for (let asset of assets) {
-            console.log(' • asset:', asset.name, '(' + Math.floor(asset.size / 1000) + ' kB)');
+            console.log(' • asset:', asset.name, '(' + asset.size + ' bytes)');
         }
     });
 }
@@ -42,5 +42,7 @@ async.series([
     callback => run('Butternut', webpack(butternutConfig(5)), callback)
 ], (err, results) => {
     if (err) throw err;
-    console.log('done!');
+    setTimeout(() => {
+        console.log('Done!');
+    }, 5);
 });

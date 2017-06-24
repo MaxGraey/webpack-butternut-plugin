@@ -3,11 +3,10 @@
 const path = require('path');
 const fs   = require('fs');
 
-const webpack = require('webpack');
 const sources = require('webpack-sources');
 const squash  = require('butternut').squash;
 const async   = require("neo-async");
-//const temp    = require('temp').track();
+const temp    = require('temp').track();
 
 const ModuleFilenameHelpers = require('webpack/lib/ModuleFilenameHelpers');
 
@@ -38,7 +37,7 @@ class ButternutPlugin {
     }
 
     apply(compiler) {
-        let code, map, options = this.options;
+        let code, inputMap, map, options = this.options;
         let tester = options.test = options.test || /\.js($|\?)/i;
 
         let queue = async.queue((task, callback) => {
@@ -46,21 +45,25 @@ class ButternutPlugin {
                 return callback();
             }
 
-            if (options.sourceMap) {
-
-            } else {
-                code = task.asset.source();
-            }
+            code = task.asset.source();
 
             try {
                 let codeAndMap = squash(code, options);
                 code = codeAndMap.code;
                 map  = codeAndMap.map;
+
             } catch (err) {
                 task.error(new Error(task.file + ' from ButternutPlugin\n' + err.message));
                 return callback();
             }
+
+            /*if (options.sourceMap) {
+            } else {
+                task.callback(new RawSource(code));
+            }*/
+
             task.callback(new RawSource(code));
+
             callback();
 
         }, options.concurrency || 4);
